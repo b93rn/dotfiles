@@ -1,3 +1,6 @@
+# Theme
+ZSH_THEME="agnoster"
+
 # Vars
 	HISTFILE=~/.zsh_history
 	SAVEHIST=1000 
@@ -15,8 +18,6 @@
 
 # Settings
 	export VISUAL=vim
-
-source ~/dotfiles/zsh/plugins/fixls.zsh
 
 #Functions
 	# Loop a command and show the output in vim
@@ -49,9 +50,8 @@ autoload -U compinit
 plugins=(
 	git
   git-flow
+  kubectl
 )
-
-
 
 for plugin ($plugins); do
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
@@ -59,10 +59,10 @@ done
 
 compinit
 
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
-source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/dotfiles/zsh/plugins/kubectl/kubectl.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/lib/completion.zsh
+source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/dotfiles/zsh/plugins/kubetail/kubetail.plugin.zsh
 
 # Fix for arrow-key searching
