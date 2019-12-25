@@ -4,3 +4,6 @@
 [submodule "zsh/plugins/ohmyzsh"]
 	path = zsh/plugins/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "kubectx"]
+	path = zsh/plugins/kubectx
+	url = https://github.com/ahmetb/kubectx
