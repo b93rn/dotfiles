@@ -22,7 +22,7 @@ source $ZSH/oh-my-zsh.sh
 
 ## Tmux
 
-Tmux config file can be sourced like the this:
+Tmux config file can be sourced like this:
 
 ```bash
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
