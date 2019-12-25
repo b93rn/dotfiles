@@ -1,0 +1,28 @@
+{
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 2,
+  "[csharp]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-vscode.csharp"
+  },
+  "window.zoomLevel": 0,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "omnisharp.enableRoslynAnalyzers": true,
+  "editor.maxTokenizationLineLength": 200000,
+  "editor.formatOnSave": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "zenMode.hideStatusBar": false,
+  "vim.statusBarColors.insert": "#5f0000",
+  "workbench.activityBar.visible": true,
+  "window.menuBarVisibility": "default"
+}
