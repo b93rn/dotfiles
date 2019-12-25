@@ -58,7 +58,9 @@ for plugin ($plugins); do
 done
 
 compinit
-# kubectl kubetail zsh-autosuggestions
+
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
+source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/kubectl/kubectl.zsh
 source ~/dotfiles/zsh/plugins/kubetail/kubetail.zsh
