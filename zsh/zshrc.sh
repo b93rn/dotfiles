@@ -63,7 +63,7 @@ source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/kubectl/kubectl.zsh
-source ~/dotfiles/zsh/plugins/kubetail/kubetail.zsh
+source ~/dotfiles/zsh/plugins/kubetail/kubetail.plugin.zsh
 
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
