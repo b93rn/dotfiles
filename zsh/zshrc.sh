@@ -15,6 +15,7 @@ ZSH_THEME="agnoster"
   alias prox="sudo ~/Documents/mdf/scripts/oauth2-proxy.sh 4200"
   alias mdf="cd ~/Documents/mdf"
   alias vim="nvim"
+	alias dotfiles="code $HOME/dotfiles"
 
 # Settings
 	export VISUAL=vim
@@ -51,6 +52,7 @@ plugins=(
 	git
   git-flow
   kubectl
+	tmux
 )
 
 for plugin ($plugins); do
