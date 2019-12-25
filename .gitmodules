@@ -1,3 +1,6 @@
 [submodule "zsh/plugins/kubetail"]
 	path = zsh/plugins/kubetail
 	url = https://github.com/johanhaleby/kubetail
+[submodule "zsh/plugins/ohmyzsh"]
+	path = zsh/plugins/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
