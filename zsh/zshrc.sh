@@ -17,6 +17,7 @@ ZSH_THEME="agnoster"
   alias vim="nvim"
 	alias dotfiles="code $HOME/dotfiles"
 	alias kx="kubectx"
+	alias projects="cd ~/Documents/projects"
 
 # Settings
 	export VISUAL=vim
