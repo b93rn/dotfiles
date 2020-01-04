@@ -2,6 +2,10 @@
 
 These are my dotfiles that i use for private and professional projects.
 
+```bash
+git clone --recursive https://github.com/b93rn/dotfiles.git
+```
+
 ## VSCode
 
 Link settings.json to the vs code settings:
