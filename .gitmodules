@@ -10,3 +10,6 @@
 [submodule "zsh/plugins/zsh-autosuggestions"]
 	path = zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "tmux/tmux-airline-dracula"]
+	path = tmux/tmux-airline-dracula
+	url = https://github.com/sei40kr/tmux-airline-dracula

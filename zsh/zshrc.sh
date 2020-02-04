@@ -1,3 +1,6 @@
+# Boot ZSH with tmux
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # Theme
 ZSH_THEME="agnoster"
 
