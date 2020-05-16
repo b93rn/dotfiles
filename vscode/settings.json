@@ -25,5 +25,16 @@
   "vim.statusBarColors.insert": "#5f0000",
   "workbench.activityBar.visible": true,
   "window.menuBarVisibility": "default",
-  "csharp.maxProjectFileCountForDiagnosticAnalysis": 10000
+  "csharp.maxProjectFileCountForDiagnosticAnalysis": 10000,
+  "databricks.connections": [
+    {
+      "apiRootUrl": "https://westeurope.azuredatabricks.net",
+      "cloudProvider": "Azure",
+      "displayName": "Sandbox",
+      "localSyncFolder": "~/Documents/mdf/spark/notebooks",
+      "personalAccessToken": "triehard"
+    }
+  ],
+  "python.linting.enabled": false,
+  "timeline.excludeSources": ["git-history"]
 }

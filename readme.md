@@ -32,8 +32,16 @@ Tmux config file can be sourced like this:
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 ```
 
-## VIM 
+## VIM
 
 ```bash
 printf "source $HOME/dotfiles/vim/init.vim" > ~/.config/nvim/init.vim
+```
+
+## Terminator
+
+Dracula theme
+
+```bash
+printf "source $HOME/dotfiles/terminator/config" > $HOME/.config/terminator/config
 ```

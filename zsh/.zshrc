@@ -104,7 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k="kubectl"
 alias g="git"
-alias tb="taskbook"
 alias tel="telepresence"
 alias prox="sudo ~/Documents/mdf/scripts/oauth2-proxy.sh 4200"
 alias mdf="cd ~/Documents/mdf"
