@@ -16,11 +16,15 @@ ZSH_THEME="agnoster"
   alias tb="taskbook"
   alias tel="telepresence"
   alias prox="sudo ~/Documents/mdf/scripts/oauth2-proxy.sh 4200"
-  alias mdf="cd ~/Documents/mdf"
   alias vim="nvim"
 	alias dotfiles="code $HOME/dotfiles"
 	alias kx="kubectx"
 	alias projects="cd ~/Documents/projects"
+	alias dn="dotnet"
+	alias dnrs="dn restore"
+	alias dnt="dn test"
+	alias dnwt="dn watch test"
+	alias dnb="dn build"
 
 # Settings
 	export VISUAL=vim
