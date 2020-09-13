@@ -7,7 +7,7 @@ set nohlsearch
 set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set smartindent
 set nu
@@ -19,6 +19,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set termguicolors
+set clipboard=unnamedplus
 
 "
 " Give more space for displaying messages.
@@ -42,10 +43,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dracula
 set background=dark
 set t_Co=256
 
