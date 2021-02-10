@@ -45,3 +45,15 @@ Dracula theme
 ```bash
 printf "source $HOME/dotfiles/terminator/config" > $HOME/.config/terminator/config
 ```
+
+## i3
+
+```bash
+ln ~/dotfiles/i3/config ~/.config/i3/
+```
+
+### rofi
+```bash
+mkdir ~/.config/rofi
+ln ~/dotfiles/i3/config.rasi
+```

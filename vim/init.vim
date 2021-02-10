@@ -21,7 +21,6 @@ set incsearch
 set termguicolors
 set clipboard=unnamedplus
 
-"
 " Give more space for displaying messages.
 set cmdheight=2
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
@@ -32,18 +31,17 @@ let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'jaredgorski/spacecamp'
-Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'dense-analysis/ale'
-Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'easymotion/vim-easymotion'
+Plug 'preservim/nerdtree'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'dense-analysis/ale'
+Plug 'jupyter-vim/jupyter-vim'
 
 call plug#end()
 
@@ -51,19 +49,17 @@ colorscheme dracula
 set background=dark
 set t_Co=256
 
+let g:coc_global_extensions=[ 'coc-omnisharp' ]
+
+let g:ale_linters = {
+\   'cs': ['OmniSharp']
+\}
+
+let b:ale_linters = ['cs']
+
 if executable('rg')
     let g:rg_derive_root='true'
 endif
-
-let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_selector_ui = 'fzf'
-let g:OmniSharp_highlight_types = 3
-
-let g:ale_linters = {
-\ 'cs': ['OmniSharp']
-\}
-
-nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
 
 hi MatchParen ctermfg=208 ctermbg=bg
 
@@ -83,4 +79,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nmap <leader>rn <Plug>(coc-rename)
 
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+" NerdTree
+nnoremap <leader>b :NERDTreeToggle<CR>
+
+
+
+
