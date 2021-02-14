@@ -55,5 +55,5 @@ ln ~/dotfiles/i3/config ~/.config/i3/
 ### rofi
 ```bash
 mkdir ~/.config/rofi
-ln ~/dotfiles/i3/config.rasi
+ln ~/dotfiles/i3/config.rasi ~/.config/rofi/
 ```
