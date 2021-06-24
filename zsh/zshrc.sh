@@ -1,5 +1,7 @@
 # Boot ZSH with tmux
-# if [ "$TMUX" = "" ]; then tmux; fi
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux
+#fi
 
 # Theme
 ZSH_THEME="agnoster"
@@ -15,7 +17,6 @@ ZSH_THEME="agnoster"
   alias g="git"
   alias tb="taskbook"
   alias tel="telepresence"
-  alias prox="sudo ~/Documents/mdf/scripts/oauth2-proxy.sh 4200"
   alias vim="nvim"
 	alias dotfiles="code $HOME/dotfiles"
 	alias kx="kubectx"
