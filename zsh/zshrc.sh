@@ -5,6 +5,7 @@
 
 # Theme
 ZSH_THEME="agnoster"
+AML="-g rg-ml -w mdf-ml"
 
 # Vars
 	HISTFILE=~/.zsh_history
@@ -18,14 +19,17 @@ ZSH_THEME="agnoster"
   alias tb="taskbook"
   alias tel="telepresence"
   alias vim="nvim"
-	alias dotfiles="code $HOME/dotfiles"
-	alias kx="kubectx"
-	alias projects="cd ~/Documents/projects"
-	alias dn="dotnet"
-	alias dnrs="dn restore"
-	alias dnt="dn test"
-	alias dnwt="dn watch test"
-	alias dnb="dn build"
+  alias viminit="cd ~/.dotfiles/vim/ && nvim init.vim"
+  alias dotfiles="code $HOME/dotfiles"
+  alias kx="kubectx"
+  alias projects="cd ~/Documents/projects"
+  alias dn="dotnet"
+  alias dnrs="dn restore"
+  alias dnt="dn test"
+  alias dnwt="dn watch test"
+  alias dnb="dn build"
+#   if socket is already in use: use systemctl stop ntp
+  alias resettime="sudo timedatectl set-timezone Europe/Amsterdam && sudo ntpdate -s ntp.ubuntu.com && date"
 
 # Settings
 	export VISUAL=vim
@@ -66,16 +70,16 @@ plugins=(
 )
 
 for plugin ($plugins); do
-    fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
+    fpath=(~/.dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
 
 compinit
 
-source ~/dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
-source ~/dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
-source ~/dotfiles/zsh/plugins/ohmyzsh/lib/completion.zsh
-source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source ~/dotfiles/zsh/plugins/kubetail/kubetail.plugin.zsh
+source ~/.dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
+source ~/.dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
+source ~/.dotfiles/zsh/plugins/ohmyzsh/lib/completion.zsh
+source ~/.dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/.dotfiles/zsh/plugins/kubetail/kubetail.plugin.zsh
 
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
