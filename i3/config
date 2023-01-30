@@ -199,7 +199,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioPrev exec playerctl previous
 
 # Wallpaper
-exec_always feh --bg-scale ~/Pictures/wallpaper1.png
+exec_always feh --bg-scale ~/Pictures/Wallpaper/cat-waves.png
 
 # Generated with arandr
 exec_always ~/.screenlayout/setup.sh
@@ -212,7 +212,7 @@ assign[class="Teams"] $ws8
 exec --no-startup-id spotify
 exec brave-browser
 exec i3-sensible-terminal
-exec teams
+exec brave-browser --app=https://teams.microsoft.com/
 
 exec_always i3-msg "workspace 8, move workspace to output eDP-1-1"
 
