@@ -1,0 +1,10 @@
+iterm2
+raycast
+keepingyouawake
+vlc
+keka
+kap
+time-out
+spotify
+dbeaver-community
+visual-studio-code

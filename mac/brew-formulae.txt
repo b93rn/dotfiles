@@ -1,0 +1,14 @@
+ffmpeg
+imagemagick
+wget
+telnet
+tldr
+neovim
+fzf
+datawire/blackbird/telepresence
+azure-cli
+kubectl
+kubectx
+dotnet
+dotnet-sdk
+dd

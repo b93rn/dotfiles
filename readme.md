@@ -2,7 +2,7 @@
 
 These are my dotfiles that i use for private and professional projects.
 
-```bash
+```zsh
 git clone --recursive https://github.com/b93rn/dotfiles.git
 ```
 
@@ -12,6 +12,12 @@ Link settings.json to the vs code settings:
 
 ```bash
 ln ~/.dotfiles/vscode/settings.json ~/.config/Code/User
+```
+
+Install extensions:
+
+```bash
+cat extensions.txt | xargs -L1 code --install-extension
 ```
 
 ## ZSH
@@ -56,5 +62,19 @@ ln ~/.dotfiles/i3/config ~/.config/i3/
 
 ```bash
 mkdir ~/.config/rofi
-ln ~/dotfiles/i3/config.rasi ~/.config/rofi/
+ln ~/.dotfiles/i3/config.rasi ~/.config/rofi/
+```
+
+## Mac OS
+
+### Brew casks
+
+```bash
+xargs brew install < ~/.dotfiles/mac/brew-casks.txt
+```
+
+### Brew formulae
+
+```bash
+xargs brew install < ~/.dotfiles/mac/brew-formulae.txt
 ```
