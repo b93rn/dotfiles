@@ -1,18 +1,11 @@
 /*Dracula theme based on the Purple official rofi theme*/
 
-configuration {
-    show-icons:      true;
-    display-drun:    "";
-    disable-history: false;
-}
-
 * {
     font: "Jetbrains Mono 12";
     foreground: #f8f8f2;
     background-color: #282a36;
     active-background: #6272a4;
     urgent-background: #ff5555;
-    urgent-foreground: #282a36;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
@@ -21,27 +14,27 @@ configuration {
 }
 
 #window {
-    background-color: @background-color;
-    border:           3;
-    border-radius:    6;
-    border-color:     @bordercolor;
-    padding:          15;
+    background-color: @background;
+    border:           1;
+    border-radius: 6;
+    border-color: @bordercolor;
+    padding:          5;
 }
 #mainbox {
     border:  0;
     padding: 0;
 }
 #message {
-    border:       0px;
+    border:       1px dash 0px 0px ;
     border-color: @separatorcolor;
-    padding:      1px;
+    padding:      1px ;
 }
 #textbox {
     text-color: @foreground;
 }
 #listview {
     fixed-height: 0;
-    border:       0px;
+    border:       2px dash 0px 0px ;
     border-color: @bordercolor;
     spacing:      2px ;
     scrollbar:    false;
@@ -49,10 +42,10 @@ configuration {
 }
 #element {
     border:  0;
-    padding: 3px ;
+    padding: 1px ;
 }
 #element.normal.normal {
-    background-color: @background-color;
+    background-color: @background;
     text-color:       @foreground;
 }
 #element.normal.urgent {
@@ -76,7 +69,7 @@ configuration {
     text-color:       @foreground;
 }
 #element.alternate.normal {
-    background-color: @background-color;
+    background-color: @background;
     text-color:       @foreground;
 }
 #element.alternate.urgent {
@@ -123,11 +116,15 @@ configuration {
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ">";
+    str:        ":";
     margin:     0px 0.3em 0em 0em ;
     text-color: @foreground;
 }
-element-text, element-icon {
+element-text {
     background-color: inherit;
-    text-color: inherit;
+    text-color:       inherit;
+}
+
+element-icon {
+    background-color: inherit;
 }

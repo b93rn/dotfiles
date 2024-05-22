@@ -13,3 +13,6 @@
 [submodule "tmux/tmux-airline-dracula"]
 	path = tmux/tmux-airline-dracula
 	url = https://github.com/sei40kr/tmux-airline-dracula
+[submodule "xfce4-terminal"]
+	path = xfce4-terminal
+	url = https://github.com/dracula/xfce4-terminal

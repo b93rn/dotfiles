@@ -3,9 +3,10 @@
 #  exec tmux
 #fi
 
+BROWSER="brave"
+
 # Theme
 ZSH_THEME="agnoster"
-AML="-g rg-ml -w mdf-ml"
 
 # Vars
 	HISTFILE=~/.zsh_history
@@ -15,24 +16,32 @@ AML="-g rg-ml -w mdf-ml"
 
 # Aliases
   alias k="kubectl"
+  alias c="code"
   alias g="git"
   alias tb="taskbook"
   alias tel="telepresence"
   alias vim="nvim"
   alias viminit="cd ~/.dotfiles/vim/ && nvim init.vim"
-  alias dotfiles="code $HOME/dotfiles"
+  alias dotfiles="code $HOME/.dotfiles"
   alias kx="kubectx"
   alias projects="cd ~/Documents/projects"
   alias dn="dotnet"
-  alias dnrs="dn restore"
-  alias dnt="dn test"
-  alias dnwt="dn watch test"
-  alias dnb="dn build"
-#   if socket is already in use: use systemctl stop ntp
-  alias resettime="sudo timedatectl set-timezone Europe/Amsterdam && sudo ntpdate -s ntp.ubuntu.com && date"
+  alias dnrs="dotnet restore"
+  alias dnt="dotnet test"
+  alias dnwt="dotnet watch test"
+  alias dnwr="dotnet watch run"
+  alias dnb="dotnet build"
+  alias mdf="cd ~/Documents/mdf/ && code \`ls | fzf\`"
+  alias mdfv="cd ~/Documents/mdf/ && cd \`ls | fzf\` && vim ."
+  alias mdfcd="cd ~/Documents/mdf/ && cd \`ls | fzf\`"
+  alias mmll="cd ~/Documents/mdf/mdf-ml && code ."
+  alias cf="cd \`ls -d */ | fzf\`"
+  alias i3="cd ~/.config/i3/"
+  alias sv="source venv/bin/activate && conda deactivate"
 
 # Settings
 	export VISUAL=vim
+  export ASPNETCORE_ENVIRONMENT="Development"
 
 #Functions
 	# Loop a command and show the output in vim
@@ -63,10 +72,11 @@ AML="-g rg-ml -w mdf-ml"
 autoload -U compinit
 
 plugins=(
-	git
+  git
   git-flow
   kubectl
-	tmux
+  azure
+  dotnet
 )
 
 for plugin ($plugins); do

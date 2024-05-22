@@ -108,3 +108,5 @@ alias tel="telepresence"
 alias prox="sudo ~/Documents/mdf/scripts/oauth2-proxy.sh 4200"
 alias mdf="cd ~/Documents/mdf"
 alias vim="nvim"
+
+export LD_LIBRARY_PATH=/opt/cuda/targets/x86_64-linux/lib/libcudart.so
