@@ -78,3 +78,9 @@ xargs brew install < ~/.dotfiles/mac/brew-casks.txt
 ```bash
 xargs brew install < ~/.dotfiles/mac/brew-formulae.txt
 ```
+
+### Aerospace
+
+```bash
+stow aerospace
+```
