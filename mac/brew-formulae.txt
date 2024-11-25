@@ -1,4 +1,6 @@
 ffmpeg
+zsh-autosuggestions
+stow
 imagemagick
 wget
 telnet
@@ -9,6 +11,4 @@ datawire/blackbird/telepresence
 azure-cli
 kubectl
 kubectx
-dotnet
-dotnet-sdk
-FelixKratz/formulae
+FelixKratz/formulae/borders

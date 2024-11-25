@@ -11,7 +11,7 @@ git clone --recursive https://github.com/b93rn/dotfiles.git
 Link settings.json to the vs code settings:
 
 ```bash
-ln ~/dotfiles/vscode/settings.json ~/.config/Code/User
+ln ~/.dotfiles/vscode/settings.json ~/.config/Code/User
 ```
 
 Install extensions:
