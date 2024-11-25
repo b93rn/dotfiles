@@ -3,18 +3,37 @@
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
+start-at-login = true
+
+after-startup-command = [
+    # JankyBorders has a built-in detection of already running process,
+    # so it won't be run twice on AeroSpace restart
+    'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xffbd93f9 inactive_color=0xff494d64 width=8.0',
+]
+
 [mode.main.binding]
-alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
+alt-enter = 'exec-and-forget kitty'
+alt-b = 'exec-and-forget open -a "Brave Browser.app" -n'
 
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
 
+alt-left = 'focus left'
+alt-down = 'focus down'
+alt-up = 'focus up'
+alt-right = 'focus right'
+
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
+
+alt-shift-left = 'move left'
+alt-shift-down = 'move down'
+alt-shift-up = 'move up'
+alt-shift-right = 'move right'
 
 # alt-h = 'split horizontal'
 alt-v = 'split vertical'
@@ -57,14 +76,34 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10'
 
-alt-shift-c = 'reload-config'
+alt-shift-r = 'reload-config'
 
 alt-r = 'mode resize'
 
+[gaps]
+inner.horizontal = 6
+inner.vertical = 6
+outer.left = 6
+outer.bottom = 6
+outer.top = 6
+outer.right = 6
+
 [mode.resize.binding]
-h = 'resize width -50'
-j = 'resize height +50'
-k = 'resize height -50'
-l = 'resize width +50'
+h = 'resize width -250'
+j = 'resize height +250'
+k = 'resize height -250'
+l = 'resize width +250'
 enter = 'mode main'
 esc = 'mode main'
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'       # Main monitor
+4 = 'main'       # Main monitor
+5 = 'main'       # Main monitor
+6 = 'main'       # Main monitor
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
+10 = 'secondary'

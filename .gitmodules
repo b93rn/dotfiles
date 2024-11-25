@@ -1,18 +1,3 @@
-[submodule "zsh/plugins/kubetail"]
-	path = zsh/plugins/kubetail
-	url = https://github.com/johanhaleby/kubetail
-[submodule "zsh/plugins/ohmyzsh"]
-	path = zsh/plugins/ohmyzsh
-	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "kubectx"]
-	path = zsh/plugins/kubectx
-	url = https://github.com/ahmetb/kubectx
 [submodule "zsh/plugins/zsh-autosuggestions"]
 	path = zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "tmux/tmux-airline-dracula"]
-	path = tmux/tmux-airline-dracula
-	url = https://github.com/sei40kr/tmux-airline-dracula
-[submodule "xfce4-terminal"]
-	path = xfce4-terminal
-	url = https://github.com/dracula/xfce4-terminal

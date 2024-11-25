@@ -1,6 +1,6 @@
-iterm2
-raycast
+kitty
 keepingyouawake
+raycast
 vlc
 keka
 kap

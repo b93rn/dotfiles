@@ -11,7 +11,7 @@ git clone --recursive https://github.com/b93rn/dotfiles.git
 Link settings.json to the vs code settings:
 
 ```bash
-ln ~/.dotfiles/vscode/settings.json ~/.config/Code/User
+ln ~/dotfiles/vscode/settings.json ~/.config/Code/User
 ```
 
 Install extensions:
@@ -28,6 +28,12 @@ Replace all content within your current .zshrc file with the following:
 export ZSH=$HOME/.oh-my-zsh
 source $HOME/.dotfiles/zsh/zshrc_manager.sh
 source $ZSH/oh-my-zsh.sh
+```
+
+### Plugins
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestionsu
 ```
 
 ## Tmux
@@ -70,7 +76,7 @@ ln ~/.dotfiles/i3/config.rasi ~/.config/rofi/
 ### Brew casks
 
 ```bash
-xargs brew install < ~/.dotfiles/mac/brew-casks.txt
+xargs brew install --cask < ~/.dotfiles/mac/brew-casks.txt
 ```
 
 ### Brew formulae
@@ -83,4 +89,10 @@ xargs brew install < ~/.dotfiles/mac/brew-formulae.txt
 
 ```bash
 stow aerospace
+```
+
+### Kitty
+
+```bash
+stow kitty
 ```

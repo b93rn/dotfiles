@@ -1,2 +1,2 @@
 # Run before e.g. tmux.
-source ~/.dotfiles/zsh/zshrc.sh
+source ~/dotfiles/zsh/zshrc.sh
