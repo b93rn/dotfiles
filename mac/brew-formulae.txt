@@ -7,7 +7,7 @@ telnet
 tldr
 neovim
 fzf
-datawire/blackbird/telepresence
+telepresenceio/telepresence/telepresence-oss
 azure-cli
 kubectl
 kubectx
