@@ -22,7 +22,7 @@ ZSH_THEME="agnoster"
   alias tb="taskbook"
   alias tel="telepresence"
   alias vim="nvim"
-  alias viminit="cd ~/dotfiles/vim/ && nvim init.vim"
+  alias viminit="cd ~/.dotfiles/vim/ && nvim init.vim"
   alias dotfiles="code $HOME/dotfiles"
   alias kx="kubectx"
   alias projects="cd ~/Documents/projects"
@@ -75,7 +75,7 @@ ZSH_THEME="agnoster"
 
 autoload -U compinit
 
-source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+# source ~/.dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 plugins=(
   git
@@ -87,7 +87,7 @@ plugins=(
 )
 
 # for plugin ($plugins); do
-#     fpath=(~/dotfiles/zsh/plugins/$plugin $fpath)
+#     fpath=(~/.dotfiles/zsh/plugins/$plugin $fpath)
 # done
 
 compinit
@@ -110,3 +110,5 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 	zle -N down-line-or-beginning-search
 	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
+
+cd ~

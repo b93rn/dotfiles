@@ -1,6 +1,10 @@
+isen-ng/dotnet-sdk-versions/dotnet-sdk9
+isen-ng/dotnet-sdk-versions/dotnet-sdk8
+isen-ng/dotnet-sdk-versions/dotnet-sdk7
+isen-ng/dotnet-sdk-versions/dotnet-sdk6
+nikitabobko/tap/aerospace
 kitty
 keepingyouawake
-raycast
 vlc
 keka
 kap
