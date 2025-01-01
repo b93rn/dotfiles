@@ -9,63 +9,63 @@ BROWSER="brave"
 ZSH_THEME="agnoster"
 
 # Vars
-	HISTFILE=~/.zsh_history
-	SAVEHIST=1000 
-	setopt inc_append_history # To save every command before it is executed 
-	setopt share_history # setopt inc_append_history
-  MDF_CODE="~/Documents/Mydatafactory/code/"
+HISTFILE=~/.zsh_history
+SAVEHIST=1000
+setopt inc_append_history # To save every command before it is executed
+setopt share_history      # setopt inc_append_history
+MDF_CODE="~/Documents/Mydatafactory/code/"
 
 # Aliases
-  alias k="kubectl"
-  alias c="code"
-  alias g="git"
-  alias tb="taskbook"
-  alias tel="telepresence"
-  alias vim="nvim"
-  alias viminit="cd ~/.dotfiles/vim/ && nvim init.vim"
-  alias dotfiles="code $HOME/dotfiles"
-  alias kx="kubectx"
-  alias projects="cd ~/Documents/projects"
-  alias dn="dotnet"
-  alias dnrs="dotnet restore"
-  alias dnt="dotnet test"
-  alias dnwt="dotnet watch test"
-  alias dnwr="dotnet watch run"
-  alias dnb="dotnet build"
-  alias mdf="cd $MDF_CODE && code \`ls | fzf\`"
-  alias mdfc="cd $MDF_CODE && cursor \`ls | fzf\`"
-  alias mdfv="cd $MDF_CODE && cd \`ls | fzf\` && vim ."
-  alias mdfcd="cd $MDF_CODE && cd \`ls | fzf\`"
-  alias bxcd="cd ~/Documents/BornX/ && cd \`ls | fzf\`"
-  alias gmucd="cd ~/Documents/GMU/code/ && cd \`ls | fzf\`"
-  alias mmll="cd ~/Documents/mdf/mdf-ml && code ."
-  alias cf="cd \`ls -d */ | fzf\`"
-  alias i3="cd ~/.config/i3/"
-  alias sv="source venv/bin/activate && conda deactivate"
+alias k="kubectl"
+alias c="cursor"
+alias g="git"
+alias tb="taskbook"
+alias tel="telepresence"
+alias vim="nvim"
+alias viminit="cd ~/.dotfiles/vim/ && nvim init.vim"
+alias dotfiles="code $HOME/dotfiles"
+alias kx="kubectx"
+alias projects="cd ~/Documents/projects"
+alias dn="dotnet"
+alias dnrs="dotnet restore"
+alias dnt="dotnet test"
+alias dnwt="dotnet watch test"
+alias dnwr="dotnet watch run"
+alias dnb="dotnet build"
+alias mdf="cd $MDF_CODE && code \`ls | fzf\`"
+alias mdfc="cd $MDF_CODE && cursor \`ls | fzf\`"
+alias mdfv="cd $MDF_CODE && cd \`ls | fzf\` && vim ."
+alias mdfcd="cd $MDF_CODE && cd \`ls | fzf\`"
+alias bxcd="cd ~/Documents/BornX/ && cd \`ls | fzf\`"
+alias gmucd="cd ~/Documents/GMU/code/ && cd \`ls | fzf\`"
+alias mmll="cd ~/Documents/mdf/mdf-ml && code ."
+alias cf="cd \`ls -d */ | fzf\`"
+alias i3="cd ~/.config/i3/"
+alias sv="source venv/bin/activate && conda deactivate"
 
 # Settings
-	export VISUAL=vim
-  export ASPNETCORE_ENVIRONMENT="Development"
+export VISUAL=vim
+export ASPNETCORE_ENVIRONMENT="Development"
 
 #Functions
-	# Loop a command and show the output in vim
-	loop() {
-		echo ":cq to quit\n" > /tmp/log/output 
-		fc -ln -1 > /tmp/log/program
-		while true; do
-			cat /tmp/log/program >> /tmp/log/output ;
-			$(cat /tmp/log/program) |& tee -a /tmp/log/output ;
-			echo '\n' >> /tmp/log/output
-			vim + /tmp/log/output || break;
-			rm -rf /tmp/log/output
-		done;
-	}
+# Loop a command and show the output in vim
+loop() {
+  echo ":cq to quit\n" >/tmp/log/output
+  fc -ln -1 >/tmp/log/program
+  while true; do
+    cat /tmp/log/program >>/tmp/log/output
+    $(cat /tmp/log/program) |& tee -a /tmp/log/output
+    echo '\n' >>/tmp/log/output
+    vim + /tmp/log/output || break
+    rm -rf /tmp/log/output
+  done
+}
 
 # Custom cd
-  chpwd() ls
+chpwd() ls
 
-# For vim mappings: 
-	stty -ixon
+# For vim mappings:
+stty -ixon
 
 # Completions
 # These are all the plugin options available: https://github.com/robbyrussell/oh-my-zsh/tree/291e96dcd034750fbe7473482508c08833b168e3/plugins
@@ -100,15 +100,15 @@ compinit
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
 if [[ "${terminfo[kcuu1]}" != "" ]]; then
-	autoload -U up-line-or-beginning-search
-	zle -N up-line-or-beginning-search
-	bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+  autoload -U up-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
 fi
 # start typing + [Down-Arrow] - fuzzy find history backward
 if [[ "${terminfo[kcud1]}" != "" ]]; then
-	autoload -U down-line-or-beginning-search
-	zle -N down-line-or-beginning-search
-	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
 cd ~
