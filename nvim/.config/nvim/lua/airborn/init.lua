@@ -8,7 +8,5 @@ end
 Nnoremap = CreateNoremap("n", { noremap = true })
 Inoremap = CreateNoremap("i", { noremap = true })
 
-require("airborn.cmp")
 require("airborn.telescope")
-require("airborn.lsp")
 require("airborn.luasnip")

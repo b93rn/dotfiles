@@ -37,7 +37,6 @@ Plug 'numToStr/Comment.nvim'
 Plug 'preservim/nerdtree'
 " Lsp
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 
