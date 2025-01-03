@@ -96,3 +96,9 @@ stow aerospace
 ```bash
 stow kitty
 ```
+
+### Ghostty
+
+```bash
+stow ghostty
+```

@@ -12,7 +12,7 @@ after-startup-command = [
 ]
 
 [mode.main.binding]
-alt-enter = 'exec-and-forget kitty'
+alt-enter = 'exec-and-forget ghostty'
 alt-b = 'exec-and-forget open -a "Brave Browser.app" -n'
 
 alt-h = 'focus left'
