@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/home/lenard/.oh-my-zsh"
+# Path to your oh-my-zsh installation
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -63,50 +63,110 @@ ZSH_THEME="agnoster"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow kubectl kubetail zsh-autosuggestions)
+# Browser
+BROWSER="arc"
 
+# History settings
+HISTFILE=~/.zsh_history
+SAVEHIST=1000
+setopt inc_append_history # To save every command before it is executed
+setopt share_history      # setopt inc_append_history
+
+# Custom paths
+MDF_CODE="~/Documents/Mydatafactory/code/"
+
+# Environment variables
+export VISUAL=vim
+export ASPNETCORE_ENVIRONMENT="Development"
+
+# For vim mappings
+stty -ixon
+
+# Custom cd function
+chpwd() ls
+
+# Define plugins - these are loaded by oh-my-zsh
+plugins=(
+  git            # Git integration and aliases
+  git-flow       # Git-flow completion and aliases
+  kubectl        # Kubectl autocompletion and aliases
+  azure          # Azure CLI helpers
+  dotnet         # .NET Core aliases and completion
+  zsh-autosuggestions # Command suggestions as you type
+  kube-ps1       # Kubernetes prompt integration
+)
+
+# Source Oh My Zsh - this loads all the plugins defined above
+source $ZSH/oh-my-zsh.sh
+
+# NVM (Node Version Manager) configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source $ZSH/oh-my-zsh.sh
+# Fix for arrow-key searching
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  autoload -U up-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
 
-# User configuration
-# include Z, yo
-# ~/Documents/configs/z.sh
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
 alias k="kubectl"
+alias c="cursor"
 alias g="git"
+alias tb="taskbook"
 alias tel="telepresence"
-alias prox="sudo ~/Documents/mdf/scripts/oauth2-proxy.sh 4200"
-alias mdf="cd ~/Documents/mdf"
 alias vim="nvim"
+alias viminit="cd ~/.dotfiles/vim/ && nvim init.vim"
+alias dotfiles="c $HOME/.dotfiles"
+alias kx="kubectx"
+alias projects="cd ~/Documents/projects"
+alias dn="dotnet"
+alias dnrs="dotnet restore"
+alias dnt="dotnet test"
+alias dnwt="dotnet watch test"
+alias dnwr="dotnet watch run"
+alias dnb="dotnet build"
+alias mdf="cd $MDF_CODE && code \`ls | fzf\`"
+alias mdfc="cd $MDF_CODE && cursor \`ls | fzf\`"
+alias mdfv="cd $MDF_CODE && cd \`ls | fzf\` && vim ."
+alias mdfcd="cd $MDF_CODE && cd \`ls | fzf\`"
+alias bxcd="cd ~/Documents/BornX/ && cd \`ls | fzf\`"
+alias gmucd="cd ~/Documents/GMU/code/ && cd \`ls | fzf\`"
+alias mmll="cd ~/Documents/mdf/mdf-ml && code ."
+alias cf="cd \`ls -d */ | fzf\`"
+alias i3="cd ~/.config/i3/"
+alias sv="source .venv/bin/activate"
 
-export LD_LIBRARY_PATH=/opt/cuda/targets/x86_64-linux/lib/libcudart.so
+# Functions
+# Loop a command and show the output in vim
+loop() {
+  echo ":cq to quit\n" >/tmp/log/output
+  fc -ln -1 >/tmp/log/program
+  while true; do
+    cat /tmp/log/program >>/tmp/log/output
+    $(cat /tmp/log/program) |& tee -a /tmp/log/output
+    echo '\n' >>/tmp/log/output
+    vim + /tmp/log/output || break
+    rm -rf /tmp/log/output
+  done
+}
+
+# Source custom zsh files if they exist
+if [ -d "$HOME/.zsh" ]; then
+  for file in "$HOME/.zsh"/*.zsh; do
+    [ -r "$file" ] && source "$file"
+  done
+  unset file
+fi
+
+# Change to home directory at the end
+cd ~

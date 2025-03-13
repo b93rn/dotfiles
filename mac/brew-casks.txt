@@ -4,6 +4,7 @@ isen-ng/dotnet-sdk-versions/dotnet-sdk7
 isen-ng/dotnet-sdk-versions/dotnet-sdk6
 nikitabobko/tap/aerospace
 ghostty
+arc
 keepingyouawake
 vlc
 keka
