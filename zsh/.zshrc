@@ -147,6 +147,15 @@ alias i3="cd ~/.config/i3/"
 alias sv="source .venv/bin/activate"
 
 # Functions
+cp() {
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
+    git pull && c .
+  else
+    echo "Not a git repository. Opening in Cursor without pulling."
+    c .
+  fi
+}
+
 # Loop a command and show the output in vim
 loop() {
   echo ":cq to quit\n" >/tmp/log/output
