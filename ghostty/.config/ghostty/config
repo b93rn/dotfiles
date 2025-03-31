@@ -1,1 +1,2 @@
-theme = vesper
+# Available themes: catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+theme = catppuccin-mocha
