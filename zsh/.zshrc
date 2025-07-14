@@ -87,13 +87,13 @@ chpwd() ls
 
 # Define plugins - these are loaded by oh-my-zsh
 plugins=(
-  git            # Git integration and aliases
-  git-flow       # Git-flow completion and aliases
-  kubectl        # Kubectl autocompletion and aliases
-  azure          # Azure CLI helpers
-  dotnet         # .NET Core aliases and completion
+  git                 # Git integration and aliases
+  git-flow            # Git-flow completion and aliases
+  kubectl             # Kubectl autocompletion and aliases
+  azure               # Azure CLI helpers
+  dotnet              # .NET Core aliases and completion
   zsh-autosuggestions # Command suggestions as you type
-  kube-ps1       # Kubernetes prompt integration
+  kube-ps1            # Kubernetes prompt integration
 )
 
 # Source Oh My Zsh - this loads all the plugins defined above
@@ -101,8 +101,8 @@ source $ZSH/oh-my-zsh.sh
 
 # NVM (Node Version Manager) configuration
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
@@ -145,6 +145,8 @@ alias mmll="cd ~/Documents/mdf/mdf-ml && code ."
 alias cf="cd \`ls -d */ | fzf\`"
 alias i3="cd ~/.config/i3/"
 alias sv="source .venv/bin/activate"
+alias pxc="cd ~/Documents/BornX/Projects/pim_x"
+alias cld="claude ."
 
 # Functions
 # Loop a command and show the output in vim
