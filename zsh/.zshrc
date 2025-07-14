@@ -148,7 +148,6 @@ alias sv="source .venv/bin/activate"
 alias pxc="cd ~/Documents/BornX/Projects/pim_x"
 alias cld="claude ."
 
-# Functions
 # Loop a command and show the output in vim
 loop() {
   echo ":cq to quit\n" >/tmp/log/output
