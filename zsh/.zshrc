@@ -171,3 +171,6 @@ fi
 
 # Change to home directory at the end
 cd ~
+
+# Added by Antigravity
+export PATH="/Users/lenardborn/.antigravity/antigravity/bin:$PATH"
