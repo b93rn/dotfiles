@@ -116,9 +116,22 @@ stow claude
 
 This creates a symlink for the entire directory: `~/.claude -> ~/.dotfiles/claude/.claude`
 
+**If you encounter stow conflicts** (existing `~/.claude/` files that aren't symlinks):
+
+```bash
+cd ~/.dotfiles
+stow --adopt claude
+```
+
+The `--adopt` flag will:
+1. Move existing files from `~/.claude/` into `~/.dotfiles/claude/.claude/`
+2. Replace them with symlinks
+3. Preserve all your current configurations
+
 Included configurations:
 - `CLAUDE.md` - Global instructions for Claude Code
-- `settings.json` - Claude Code settings and hooks
+- `settings.json` - Claude Code settings, hooks, and custom statusline
+- `statusline.sh` - Custom status line showing model, context usage, and weather
 - `finish_sound.mp3` - Notification sound for task completion
 - `plugins/config.json` - Plugin configuration
 
