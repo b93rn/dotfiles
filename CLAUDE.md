@@ -80,6 +80,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 5. **Terminal Multiplexer**
    - Tmux (`tmux/.tmux.conf`) with Alt-s prefix and Dracula theme
 
+6. **Claude Code Configuration**
+   - Global config: `claude/.claude/CLAUDE.md`
+   - Contains commit message preferences and coding style instructions
+
 ### Key Dependencies
 
 - Neovim LSP requires OmniSharp for C# development
@@ -107,6 +111,7 @@ When editing configurations:
   - Linux: `i3/config`
 - **Terminal themes**: Each terminal has its own theme config file
 - **Homebrew packages**: Update `mac/brew-casks.txt` or `mac/brew-formulae.txt`
+- **Claude Code settings**: Edit `claude/.claude/CLAUDE.md` for global Claude instructions
 
 ## Notes
 

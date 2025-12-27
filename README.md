@@ -105,3 +105,31 @@ stow kitty
 ```bash
 stow ghostty
 ```
+
+## Claude Code
+
+Stow the Claude Code global configuration:
+
+```bash
+stow claude
+```
+
+This creates a symlink for the entire directory: `~/.claude -> ~/.dotfiles/claude/.claude`
+
+Included configurations:
+- `CLAUDE.md` - Global instructions for Claude Code
+- `settings.json` - Claude Code settings and hooks
+- `finish_sound.mp3` - Notification sound for task completion
+- `plugins/config.json` - Plugin configuration
+
+**Adding custom commands, skills, or configurations:**
+
+Since the entire `~/.claude/` directory is symlinked, any new files you create (commands, skills, etc.) are automatically in your dotfiles repo. Just commit them when ready:
+
+```bash
+cd ~/.dotfiles
+git add claude/
+git commit -m "Add custom Claude configurations"
+```
+
+**Note:** Runtime files like `history.jsonl`, `debug/`, and `todos/` are ignored via `.gitignore`.

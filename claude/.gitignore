@@ -1,0 +1,5 @@
+# Ignore runtime/cache files
+.claude/plugins/installed_plugins.json
+.claude/plugins/known_marketplaces.json
+.claude/plugins/marketplaces/
+.claude/plugins/repos/
