@@ -118,6 +118,11 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
   bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+# Load machine-specific overrides without tracking them in dotfiles.
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
+
 # Aliases
 alias k="kubectl"
 alias c="cursor"
@@ -146,7 +151,8 @@ alias cf="cd \`ls -d */ | fzf\`"
 alias i3="cd ~/.config/i3/"
 alias sv="source .venv/bin/activate"
 alias pxc="cd ~/Documents/BornX/Projects/pim_x"
-alias cld="claude ."
+alias tc="telepresence quit && telepresence connect"
+alias cld="claude"
 
 # Loop a command and show the output in vim
 loop() {

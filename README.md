@@ -41,10 +41,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ## Tmux
 
-Tmux config file can be sourced like this:
+Stow the tmux configuration:
 
 ```bash
-printf "source-file $HOME/.dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+stow tmux
 ```
 
 ## NVIM
