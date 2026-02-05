@@ -1,10 +1,5 @@
 {
   "includeCoAuthoredBy": false,
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh",
-    "padding": 0
-  },
   "hooks": {
     "Stop": [
       {
@@ -15,17 +10,18 @@
           }
         ]
       }
-    ],
-    "Notification": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "say 'Claude has needs your attention!'"
-          }
-        ]
-      }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true
 }
